@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/home/philip/.vim'
+let g:netrw_dirhist_5='/usr/share/vim/vimfiles/ftplugin'
+let g:netrw_dirhist_4='/home/philip/.vim/autoload'
+let g:netrw_dirhist_3='/home/philip/Hard-Drive/UniWork/Molecular_Simulation_Assignment/FORMATTED_TUP_FILES'
+let g:netrw_dirhist_2='/usr/share/vim/vimfiles/autoload'
+let g:netrw_dirhist_1='/home/philip/Hard-Drive/Uni_Work/Year 3/Statistical Mechanics'
+let g:netrw_dirhist_0='/home/philip/Hard-Drive/UniWork/Molecular_Simulation_Assignment/EQUILIBRATE_T_from_1_to_2.5'
+let g:netrw_dirhist_9='/home/philip'
+let g:netrw_dirhist_8='/home'
+let g:netrw_dirhist_7='/home/philip'
