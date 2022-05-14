@@ -124,6 +124,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'altercation/vim-colors-solarized'
 Plug 'preservim/nerdtree'
 Plug 'sirver/UltiSnips'
+Plug 'honza/vim-snippets'
 call plug#end()
 "}}}
 
