@@ -20,7 +20,7 @@ alias dotfiles='/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=${HOME}'
 #Git aliases
 alias gita='git add'
 alias gitcm='git commit -m'
-alias gitl='git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit'
+alias gitl='git log --graph --oneline --abbrev-commit'
 alias gits='git status'
 
 bindkey '^[[C-w' backward-kill-word
