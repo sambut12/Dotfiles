@@ -21,6 +21,10 @@ augroup filetype_python
      autocmd FileType python nnoremap <buffer> <localleader>c I#<esc>
 augroup END
 
+augroup filetype_tex
+     autocmd!
+     autocmd FileType tex nnoremap <buffer> <localleader>c I%<esc>
+augroup END
 augroup filetype_bash
      autocmd!
      autocmd FileType sh nnoremap <buffer> <localleader>c I#<esc>
@@ -88,6 +92,9 @@ nnoremap <leader>b1 :b 1<CR>
 nnoremap <leader>b2 :b 2<CR>
 nnoremap <leader>b3 :b 3<CR>
 nnoremap <leader>b4 :b 4<CR>
+nnoremap <leader>b5 :b 5<CR>
+nnoremap <leader>b6 :b 6<CR>
+nnoremap <leader>b7 :b 7<CR>
 nnoremap <leader>bd :bd<CR>
 
 "Live preview for LaTex
