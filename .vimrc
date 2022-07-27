@@ -7,7 +7,6 @@ augroup filetype_vim
 augroup END
 
 augroup load_file
-     autocmd BufNewFile * :write
      autocmd BufRead * :let @/ = ""
 augroup END
 
