@@ -94,6 +94,9 @@ nnoremap <leader>b4 :b 4<CR>
 nnoremap <leader>b5 :b 5<CR>
 nnoremap <leader>b6 :b 6<CR>
 nnoremap <leader>b7 :b 7<CR>
+nnoremap <leader>b8 :b 8<CR>
+nnoremap <leader>b9 :b 9<CR>
+nnoremap <leader>b10 :b 10<CR>
 nnoremap <leader>bd :bd<CR>
 
 "Live preview for LaTex
@@ -131,6 +134,7 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'preservim/nerdtree'
 Plug 'sirver/UltiSnips'
 Plug 'honza/vim-snippets'
+Plug 'tpope/vim-commentary'
 call plug#end()
 "}}}
 
