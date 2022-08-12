@@ -6,6 +6,8 @@ augroup filetype_vim
     autocmd FileType vim nnoremap <buffer> <localleader>f Vatzf
 augroup END
 
+au BufNewFile,BufRead *.cell set filetype=fortran
+
 augroup load_file
      autocmd BufRead * :let @/ = ""
 augroup END
@@ -135,6 +137,8 @@ Plug 'preservim/nerdtree'
 Plug 'sirver/UltiSnips'
 Plug 'honza/vim-snippets'
 Plug 'tpope/vim-commentary'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 "}}}
 
@@ -201,19 +205,27 @@ let g:airline#extensions#tabline#buffer_nr_show = 1
 
 "Aesthetics {{{
 set termguicolors
-colorscheme solarized
 
-"Highlight the line number because solarized theme broke for some reason
-highlight LineNr term=bold cterm=NONE ctermfg=Black ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
+"Changed to solarised8
+colorscheme solarized8
 
 "Highlights folds in black and white so it's actually readable
 hi Folded cterm=NONE ctermfg=Black ctermbg=white guifg=Black guibg=White
 hi Search cterm=NONE guifg=Black guibg=white
 
+"Gitgutter colours
+highlight GitGutterAdd    guifg=#009900 ctermfg=2
+highlight GitGutterChange guifg=#bbbb00 ctermfg=3
+highlight GitGutterDelete guifg=#ff2222 ctermfg=1
+
 "Changes cursor type for insert mode
 let &t_SI = "\<Esc>[6 q"
 let &t_SR = "\<Esc>[4 q"
 let &t_EI = "\<Esc>[2 q"
+
+highlight LineNr term=bold cterm=NONE ctermfg=Black ctermbg=NONE gui=NONE guifg=White guibg=NONE
+highlight CursorLineNr term=bold cterm=NONE ctermfg=Black ctermbg=NONE gui=NONE guifg=White guibg=NONE
+highlight SignColumn term=bold cterm=NONE ctermfg=White ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 
 "Toggles highlighting for search
 nnoremap <silent> _ :nohl<CR>
