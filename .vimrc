@@ -52,6 +52,9 @@ set updatetime=1000
 "Change splits faster
 let mapleader=" "
 
+"Delete lines
+noremap - dd
+
 noremap <C-l> <C-w>l
 noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
