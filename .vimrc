@@ -128,8 +128,10 @@ nnoremap <C-f> :NERDTreeFind<CR>
 
 "Plugins installed using plugged {{{
 filetype plugin indent on
+execute pathogen#infect()
 call plug#begin('~/.vim/plugged')
 Plug 'lervag/vimtex'
+Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'altercation/vim-colors-solarized'
