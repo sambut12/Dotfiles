@@ -134,6 +134,7 @@ filetype plugin indent on
 execute pathogen#infect()
 call plug#begin('~/.vim/plugged')
 Plug 'lervag/vimtex'
+Plug 'sjl/gundo.vim'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -184,6 +185,8 @@ function! QuickfixToggle()
 endfunction
 
 "}}}
+
+nnoremap <F5> :GundoToggle<CR>
 
 "Vimtex settings {{{
 set conceallevel=1
