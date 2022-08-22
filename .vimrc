@@ -53,6 +53,9 @@ set updatetime=1000
 "Change splits faster
 let mapleader=" "
 
+"Delete lines
+noremap - dd
+
 noremap <C-l> <C-w>l
 noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
@@ -129,8 +132,11 @@ nnoremap <C-f> :NERDTreeFind<CR>
 execute pathogen#infect()
 "Plugins installed using plugged {{{
 filetype plugin indent on
+execute pathogen#infect()
 call plug#begin('~/.vim/plugged')
 Plug 'lervag/vimtex'
+Plug 'sjl/gundo.vim'
+Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'altercation/vim-colors-solarized'
@@ -181,6 +187,8 @@ function! QuickfixToggle()
 endfunction
 
 "}}}
+
+nnoremap <F5> :GundoToggle<CR>
 
 "Vimtex settings {{{
 set conceallevel=1
