@@ -14,7 +14,7 @@ augroup END
 augroup filetype_fortran
      autocmd!
      autocmd FileType fortran nnoremap <buffer> <localleader>c I!<esc>
-     autocmd FileType fortran nnoremap <buffer> <F8> :w<CR>:execute '!gfortran' shellescape(@%,1)<CR> :execute '!./a.out'<CR>
+     autocmd FileType fortran nnoremap <buffer> <F9> :w<CR>:execute '!gfortran' shellescape(@%,1)<CR> :execute '!./a.out'<CR>
 augroup END
 
 augroup filetype_python
