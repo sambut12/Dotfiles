@@ -93,17 +93,8 @@ nnoremap <leader>sv :source $MYVIMRC<CR>
 nnoremap <leader>sz :!source ~/.zshrc<CR>
 
 "Change buffers
-nnoremap <leader>b1 :b 1<CR>
-nnoremap <leader>b2 :b 2<CR>
-nnoremap <leader>b3 :b 3<CR>
-nnoremap <leader>b4 :b 4<CR>
-nnoremap <leader>b5 :b 5<CR>
-nnoremap <leader>b6 :b 6<CR>
-nnoremap <leader>b7 :b 7<CR>
-nnoremap <leader>b8 :b 8<CR>
-nnoremap <leader>b9 :b 9<CR>
-nnoremap <leader>b10 :b 10<CR>
 nnoremap <leader>bd :bd<CR>
+nnoremap <localleader>b :ls<CR>:b<Space>
 
 "Live preview for LaTex
 noremap <leader>lp :LLPStartPreview<CR>
@@ -135,7 +126,6 @@ filetype plugin indent on
 execute pathogen#infect()
 call plug#begin('~/.vim/plugged')
 Plug 'lervag/vimtex'
-Plug 'sjl/gundo.vim'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -187,8 +177,6 @@ function! QuickfixToggle()
 endfunction
 
 "}}}
-
-nnoremap <F5> :GundoToggle<CR>
 
 "Vimtex settings {{{
 set conceallevel=1
