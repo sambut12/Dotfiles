@@ -6,7 +6,6 @@ augroup filetype_vim
     autocmd FileType vim nnoremap <buffer> <localleader>f Vatzf
 augroup END
 
-au BufNewFile,BufRead *.cell set filetype=fortran
 
 augroup load_file
      autocmd BufRead * :let @/ = ""
@@ -15,11 +14,13 @@ augroup END
 augroup filetype_fortran
      autocmd!
      autocmd FileType fortran nnoremap <buffer> <localleader>c I!<esc>
+     autocmd FileType fortran nnoremap <buffer> <F8> :w<CR>:execute '!gfortran' shellescape(@%,1)<CR> :execute '!./a.out'<CR>
 augroup END
 
 augroup filetype_python
      autocmd!
      autocmd FileType python nnoremap <buffer> <localleader>c I#<esc>
+     autocmd FileType python nnoremap <buffer> <F9> :w<CR>:execute '!python3.9' shellescape(@%, 1)<CR>
 augroup END
 
 augroup filetype_tex
@@ -125,7 +126,7 @@ nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 "}}}
-
+execute pathogen#infect()
 "Plugins installed using plugged {{{
 filetype plugin indent on
 call plug#begin('~/.vim/plugged')
@@ -136,6 +137,7 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'preservim/nerdtree'
 Plug 'sirver/UltiSnips'
 Plug 'honza/vim-snippets'
+Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
