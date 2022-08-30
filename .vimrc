@@ -37,8 +37,8 @@ augroup END
 set number
 set hlsearch incsearch
 set relativenumber
-set tabstop=5
-set shiftwidth=5
+set tabstop=4
+set shiftwidth=4
 set expandtab
 set background=dark
 set clipboard=unnamedplus
@@ -52,7 +52,7 @@ set updatetime=1000
 "Mappings {{{
 "Change splits faster
 let mapleader=" "
-
+set backspace=indent,eol,start
 "Delete lines
 noremap - dd
 
@@ -180,15 +180,29 @@ endfunction
 
 "Vimtex settings {{{
 set conceallevel=1
-let g:tex_conceal='abdmg'
-
+let g:vimtex_syntax_conceal = {
+          \ 'accents': 1,
+          \ 'ligatures': 1,
+          \ 'cites': 1,
+          \ 'fancy': 1,
+          \ 'greek': 1,
+          \ 'math_bounds': 1,
+          \ 'math_delimiters': 1,
+          \ 'math_fracs': 1,
+          \ 'math_super_sub': 1,
+          \ 'math_symbols': 1,
+          \ 'sections': 0,
+          \ 'styles': 1,
+          \}
 "Sets vimtex default reader
 let g:vimtex_view_general_viewer = 'okular'
 let maplocalleader = "\\"
 
+
+nnoremap <localleader>wc :VimtexCountWords<CR>
 "Fold shit for latex
+let g:vimtex_quickfix_mode= 0
 let g:vimtex_fold_enabled = 1
-let g:vimtex_syntax_conceal_disable = 1
 set fillchars=fold:\ 
 "}}}
 
@@ -220,7 +234,8 @@ highlight GitGutterDelete guifg=#ff2222 ctermfg=1
 let &t_SI = "\<Esc>[6 q"
 let &t_SR = "\<Esc>[4 q"
 let &t_EI = "\<Esc>[2 q"
-
+let &t_TI = ""
+let &t_TE = ""
 highlight LineNr term=bold cterm=NONE ctermfg=Black ctermbg=NONE gui=NONE guifg=White guibg=NONE
 highlight CursorLineNr term=bold cterm=NONE ctermfg=Black ctermbg=NONE gui=NONE guifg=White guibg=NONE
 highlight SignColumn term=bold cterm=NONE ctermfg=White ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
