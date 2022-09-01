@@ -22,7 +22,6 @@ alias gita='git add'
 alias gitcm='git commit -m'
 alias gitl='git log --graph --oneline --abbrev-commit'
 alias gits='git status'
-
 bindkey '^[[C-w' backward-kill-word
 
 # Plugins for syntax colouring and autocomplete.
@@ -37,6 +36,8 @@ plugins=(
     zsh-z
 )
 
+bindkey -v
+bindkey '^[[R' history-incremental-search-backward
 # Launches oh-my-zsh.
 source $ZSH/oh-my-zsh.sh
    # If not running interactively, don't do anything 
